@@ -32,4 +32,9 @@ final List<FoodItem> fooditems = [
     imageUrl: 'assets/burger.png',
     description: 'Juicy beef burger',
   ),
+  FoodItem(
+    name: 'Burger',
+    imageUrl: 'assets/burger.png',
+    description: 'Juicy beef burger',
+  ),
 ];

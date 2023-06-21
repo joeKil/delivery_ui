@@ -5,8 +5,6 @@ import '../page/item_detail_page.dart';
 
 class DeliveryBody extends StatelessWidget {
   DeliveryBody({Key? key}) : super(key: key);
-  final List<String> items = List<String>.generate(5, (i) => "Item $i");
-
 
 
   @override
@@ -54,7 +52,6 @@ class DeliveryBody extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -74,8 +71,8 @@ class DeliveryBody extends StatelessWidget {
                 color: Colors.white,
               ),
               child: Image.asset(
-                'assets/pizza.png', // 이미지 리소스 경로
-                fit: BoxFit.contain, // 이미지가 적절히 보이도록 조정
+                'assets/pizza.png',
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -94,8 +91,8 @@ class DeliveryBody extends StatelessWidget {
                 color: Colors.white,
               ),
               child: Image.asset(
-                'assets/lunchbox.png', // 이미지 리소스 경로
-                fit: BoxFit.contain, // 이미지가 적절히 보이도록 조정
+                'assets/lunchbox.png',
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -114,8 +111,8 @@ class DeliveryBody extends StatelessWidget {
                 color: Colors.white,
               ),
               child: Image.asset(
-                'assets/burger.png', // 이미지 리소스 경로
-                fit: BoxFit.contain, // 이미지가 적절히 보이도록 조정
+                'assets/burger.png',
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -134,8 +131,8 @@ class DeliveryBody extends StatelessWidget {
                 color: Colors.white,
               ),
               child: Image.asset(
-                'assets/cake.png', // 이미지 리소스 경로
-                fit: BoxFit.contain, // 이미지가 적절히 보이도록 조정
+                'assets/cake.png',
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -144,8 +141,8 @@ class DeliveryBody extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 200.0),
               child: ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
+                physics: const ScrollPhysics(),
+                shrinkWrap: false,
                 itemCount: fooditems.length,
                 itemBuilder: (BuildContext context, int index) {
                   final heroTag = 'card${fooditems[index].name}$index';
